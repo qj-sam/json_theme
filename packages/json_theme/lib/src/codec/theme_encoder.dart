@@ -225,7 +225,7 @@ class ThemeEncoder {
   ///  * [encodeIconThemeData]
   ///  * [encodeSystemUiOverlayStyle]
   ///  * [encodeToolbarTextStyle]
-  static Map<String, dynamic>? encodeAppBarTheme(AppBarTheme? value) {
+  static Map<String, dynamic>? encodeAppBarTheme(AppBarThemeData? value) {
     Map<String, dynamic>? result;
 
     if (value != null) {
@@ -254,7 +254,7 @@ class ThemeEncoder {
   }
 
   /// Encodes the given [value] to a [String].  Supported values are:
-  ///   * `always`
+  ///   * `onDrag`
   ///   * `disabled`
   ///   * `onUnfocus`
   ///   * `onUserInteraction`
@@ -606,7 +606,7 @@ class ThemeEncoder {
   ///  * [encodeEdgeInsetsGeometry]
   ///  * [encodeNotchedShape]
   static Map<String, dynamic>? encodeBottomAppBarTheme(
-    BottomAppBarTheme? value,
+    BottomAppBarThemeData? value,
   ) {
     Map<String, dynamic>? result;
 
@@ -1858,7 +1858,7 @@ class ThemeEncoder {
         'headerForegroundColor': encodeColor(value.headerForegroundColor),
         'headerHeadlineStyle': encodeTextStyle(value.headerHeadlineStyle),
         'headerHelpStyle': encodeTextStyle(value.headerHelpStyle),
-        'inputDecorationTheme': encodeInputDecorationTheme(
+        'inputDecorationTheme': encodeInputDecorationThemeData(
           value.inputDecorationTheme,
         ),
         'locale': encodeLocale(value.locale),
@@ -2267,7 +2267,7 @@ class ThemeEncoder {
 
     if (value != null) {
       result = {
-        'inputDecorationTheme': encodeInputDecorationTheme(
+        'inputDecorationTheme': encodeInputDecorationThemeData(
           value.inputDecorationTheme,
         ),
         'menuStyle': encodeMenuStyle(value.menuStyle),
@@ -3397,8 +3397,8 @@ class ThemeEncoder {
   ///  * [encodeInputBorder]
   ///  * [encodeFloatingLabelBehavior]
   ///  * [encodeTextStyle]
-  static Map<String, dynamic>? encodeInputDecorationTheme(
-    InputDecorationTheme? value,
+  static Map<String, dynamic>? encodeInputDecorationThemeData(
+    InputDecorationThemeData? value,
   ) {
     Map<String, dynamic>? result;
 
@@ -5491,6 +5491,14 @@ class ThemeEncoder {
         case ShowValueIndicator.onlyForDiscrete:
           result = 'onlyForDiscrete';
           break;
+
+        case ShowValueIndicator.alwaysVisible:
+          result = 'alwaysVisible';
+          break;
+
+        case ShowValueIndicator.onDrag:
+          result = 'onDrag';
+          break;
       }
     }
 
@@ -7238,7 +7246,7 @@ class ThemeEncoder {
         'iconButtonTheme': encodeIconButtonThemeData(value.iconButtonTheme),
         'iconTheme': encodeIconThemeData(value.iconTheme),
         // 'indicatorColor': encodeColor(value.indicatorColor),
-        'inputDecorationTheme': encodeInputDecorationTheme(
+        'inputDecorationTheme': encodeInputDecorationThemeData(
           value.inputDecorationTheme,
         ),
         'listTileTheme': encodeListTileThemeData(value.listTileTheme),
@@ -7396,7 +7404,7 @@ class ThemeEncoder {
         'hourMinuteShape': encodeShapeBorder(value.hourMinuteShape),
         'hourMinuteTextColor': encodeColor(value.hourMinuteTextColor),
         'hourMinuteTextStyle': encodeTextStyle(value.hourMinuteTextStyle),
-        'inputDecorationTheme': encodeInputDecorationTheme(
+        'inputDecorationTheme': encodeInputDecorationThemeData(
           value.inputDecorationTheme,
         ),
         'padding': encodeEdgeInsetsGeometry(value.padding as EdgeInsets?),

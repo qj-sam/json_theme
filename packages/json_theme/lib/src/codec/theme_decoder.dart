@@ -1193,13 +1193,13 @@ class ThemeDecoder {
   ///  * [decodeColor]
   ///  * [decodeEdgeInsetsGeometry]
   ///  * [decodeNotchedShape]
-  static BottomAppBarTheme? decodeBottomAppBarTheme(
+  static BottomAppBarThemeData? decodeBottomAppBarTheme(
     dynamic value, {
     bool validate = true,
   }) {
-    BottomAppBarTheme? result;
+    BottomAppBarThemeData? result;
 
-    if (value is BottomAppBarTheme) {
+    if (value is BottomAppBarThemeData) {
       result = value;
     } else if (value != null) {
       assert(
@@ -1209,7 +1209,7 @@ class ThemeDecoder {
           validate: validate,
         ),
       );
-      result = BottomAppBarTheme(
+      result = BottomAppBarThemeData(
         color: decodeColor(value['color'], validate: false),
         elevation: JsonClass.maybeParseDouble(value['elevation']),
         height: JsonClass.maybeParseDouble(value['height']),
