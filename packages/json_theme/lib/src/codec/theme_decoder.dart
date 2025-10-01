@@ -5088,26 +5088,26 @@ class ThemeDecoder {
           validate: validate,
         ),
       );
-      result = Icon(
-        decodeIconData(value['icon'], validate: false)!,
-        applyTextScaling: JsonClass.maybeParseBool(value['applyTextScaling']),
-        blendMode: decodeBlendMode(value['blendMode'], validate: false),
-        color: ThemeDecoder.decodeColor(value['color'], validate: false),
-        fill: JsonClass.maybeParseDouble(value['fill']),
-        grade: JsonClass.maybeParseDouble(value['grade']),
-        opticalSize: JsonClass.maybeParseDouble(value['opticalSize']),
-        semanticLabel: value['semanticLabel'],
-        shadows: JsonClass.maybeFromDynamicList(
-          value['shadows'],
-          (map) => ThemeDecoder.decodeShadow(map, validate: false)!,
-        ),
-        size: JsonClass.maybeParseDouble(value['size']),
-        textDirection: ThemeDecoder.decodeTextDirection(
-          value['textDirection'],
-          validate: false,
-        ),
-        weight: JsonClass.maybeParseDouble(value['weight']),
-      );
+      // result = Icon(
+      //   decodeIconData(value['icon'], validate: false)!,
+      //   applyTextScaling: JsonClass.maybeParseBool(value['applyTextScaling']),
+      //   blendMode: decodeBlendMode(value['blendMode'], validate: false),
+      //   color: ThemeDecoder.decodeColor(value['color'], validate: false),
+      //   fill: JsonClass.maybeParseDouble(value['fill']),
+      //   grade: JsonClass.maybeParseDouble(value['grade']),
+      //   opticalSize: JsonClass.maybeParseDouble(value['opticalSize']),
+      //   semanticLabel: value['semanticLabel'],
+      //   shadows: JsonClass.maybeFromDynamicList(
+      //     value['shadows'],
+      //     (map) => ThemeDecoder.decodeShadow(map, validate: false)!,
+      //   ),
+      //   size: JsonClass.maybeParseDouble(value['size']),
+      //   textDirection: ThemeDecoder.decodeTextDirection(
+      //     value['textDirection'],
+      //     validate: false,
+      //   ),
+      //   weight: JsonClass.maybeParseDouble(value['weight']),
+      // );
     }
 
     return result;
@@ -5210,13 +5210,13 @@ class ThemeDecoder {
           validate: validate,
         ),
       );
-      result = IconData(
-        JsonClass.maybeParseInt(value['codePoint'])!,
-        fontFamily: value['fontFamily'],
-        fontFamilyFallback: value['fontFamilyFallback'],
-        fontPackage: value['fontPackage'],
-        matchTextDirection: JsonClass.parseBool(value['matchTextDirection']),
-      );
+      // result = IconData(
+      //   JsonClass.maybeParseInt(value['codePoint'])!,
+      //   fontFamily: value['fontFamily'],
+      //   fontFamilyFallback: value['fontFamilyFallback'],
+      //   fontPackage: value['fontPackage'],
+      //   matchTextDirection: JsonClass.parseBool(value['matchTextDirection']),
+      // );
     }
 
     return result;
@@ -5257,20 +5257,20 @@ class ThemeDecoder {
           validate: validate,
         ),
       );
-      result = IconThemeData(
-        applyTextScaling: JsonClass.maybeParseBool(value['applyTextScaling']),
-        color: decodeColor(value['color'], validate: false),
-        fill: JsonClass.maybeParseDouble(value['fill']),
-        grade: JsonClass.maybeParseDouble(value['grade']),
-        opacity: JsonClass.maybeParseDouble(value['opacity']),
-        opticalSize: JsonClass.maybeParseDouble(value['opticalSize']),
-        shadows: JsonClass.maybeFromDynamicList(
-          value['shadows'],
-          (map) => decodeShadow(map, validate: false)!,
-        ),
-        size: JsonClass.maybeParseDouble(value['size']),
-        weight: JsonClass.maybeParseDouble(value['weight']),
-      );
+      // result = IconThemeData(
+      //   applyTextScaling: JsonClass.maybeParseBool(value['applyTextScaling']),
+      //   color: decodeColor(value['color'], validate: false),
+      //   fill: JsonClass.maybeParseDouble(value['fill']),
+      //   grade: JsonClass.maybeParseDouble(value['grade']),
+      //   opacity: JsonClass.maybeParseDouble(value['opacity']),
+      //   opticalSize: JsonClass.maybeParseDouble(value['opticalSize']),
+      //   shadows: JsonClass.maybeFromDynamicList(
+      //     value['shadows'],
+      //     (map) => decodeShadow(map, validate: false)!,
+      //   ),
+      //   size: JsonClass.maybeParseDouble(value['size']),
+      //   weight: JsonClass.maybeParseDouble(value['weight']),
+      // );
     }
 
     return result;
